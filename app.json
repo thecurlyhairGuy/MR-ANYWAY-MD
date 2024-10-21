@@ -35,14 +35,14 @@
     "BOT_NAME" : {
        
       "description":"put A name for your bot",
-      "value":"MR-ANYWAY-MD",
+      "value":"𝗞𝗜𝗡𝗚 𝗕𝗔𝗟𝗗𝗪𝗜𝗡 𝗜𝗩 ❤️🤚🏼",
       "required":false
 
     } ,
      "BOT_MENU_LINKS" : {
     
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://i.imgur.com/TVHDPwX.jpeg",
+      "value":"https://telegra.ph/file/c2ae3b77d491788506118.mp4,https://telegra.ph/file/822f739b1983a46e8fa4c.mp4,https://telegra.ph/file/9786ecf507e251c6f1781.mp4",
       "required":false
        
      },
@@ -74,14 +74,14 @@
     
     "desc": "Your Name",
     "required": false,
-    "value": "Mr Anyway"
+    "value": "THE CURLYHAIR GUY"
   },
     "NUMERO_OWNER":
   {
     
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
     "required":false,
-    "value": "255678892560,255762190568"
+    "value": "2349132095836,2347086606304"
   },
     "WARN_COUNT":
   {
