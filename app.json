@@ -106,7 +106,12 @@
     "value":"",
     "required": false
   },
-  "ANTI_DELETE_MESSAGE" : {
+	"ANTIDELETE2" : {
+    "description": "if you want to enable anti delete message put yes else put no",
+    "value": "yes",
+        "required": false
+	},
+  "ANTIDELETE1" : {
     "description": "if you want to enable anti delete message put yes else put no",
     "value": "yes",
         "required": false
