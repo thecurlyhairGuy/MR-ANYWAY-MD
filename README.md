@@ -32,7 +32,7 @@
  
 
 
-[`PAIRING CODE`](https://anyway-session-1.onrender.com)
+[`PAIRING CODE`](https://anyway-session-2.onrender.com)
  
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
