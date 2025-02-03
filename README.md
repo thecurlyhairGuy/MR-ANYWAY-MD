@@ -9,7 +9,7 @@
 </p>
 <p align="center"> 
   <a href="https://whatsapp.com/channel/0029VagWQ255q08VTCRQKP09">
-    <img alt=Support height="390" src="https://files.catbox.moe/xbc2cd.png"> 
+    <img alt=Support height="390" src="https://files.catbox.moe/fea586.png"> 
     </p>
  
  
@@ -32,7 +32,7 @@
  
 
 
-[`PAIRING CODE`](https://anyway-session-1.onrender.com)
+[`PAIRING CODE`](https://anyway-session-2.onrender.com)
  
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
