@@ -7,7 +7,7 @@ cmd({
     alias: ["sc", "script", "info"],
     desc: "Info about the bot repository",
     category: "main",
-    react: "👨‍💻",
+    react: "🥰",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, reply }) => {
@@ -19,9 +19,9 @@ async (conn, mek, m, { from, quoted, reply }) => {
 
         // Construct the message
         const message = `
-*Hello there, Silva Spark User! 👋*
+*Hello there, ANYWAY MD User! 👋*
 
-💻 *Silva Spark MD Repository Info*:
+💻 *ANYWAY MD Repository Info*:
 ⭐ *Stars*: ${stargazers_count}
 🍴 *Forks*: ${forks_count}
 👥 *Users*: ${userCount}
@@ -30,7 +30,7 @@ async (conn, mek, m, { from, quoted, reply }) => {
 Effortlessly elevate your WhatsApp experience with our cutting-edge bot technology! 🎊
 *💡 Tip: Don’t forget to fork the repo and leave a star to show your support! 🌟*
 
-🙌 Thank you for choosing Silva Spark MD – your ultimate bot companion! 🎉
+🙌 Thank you for choosing ANYWAY MD – your ultimate bot companion! 🎉
         `;
 
         // Send the repository info as a text message
@@ -48,7 +48,7 @@ Effortlessly elevate your WhatsApp experience with our cutting-edge bot technolo
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363200367779016@newsletter',
-                        newsletterName: 'SILVA SPARK MD 💖🦄',
+                        newsletterName: 'ANYWAY MD 💖🦄',
                         serverMessageId: 143
                     }
                 }
