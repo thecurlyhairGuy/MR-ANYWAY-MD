@@ -25,7 +25,7 @@ async (conn, mek, m, { from, quoted, reply }) => {
 ⭐ *Stars*: ${stargazers_count}
 🍴 *Forks*: ${forks_count}
 👥 *Users*: ${userCount}
-🔗 *Repository*: 
+🔗 *Repository*: https://github.com/anywaytech2/ANYWAY-MD-V1
 > ✨ anyway md WhatsApp Bot – Simple. Smart. Feature-packed. 🚀
 Effortlessly elevate your WhatsApp experience with our cutting-edge bot technology! 🎊
 *💡 Tip: Don’t forget to fork the repo and leave a star to show your support! 🌟*
@@ -40,7 +40,7 @@ Effortlessly elevate your WhatsApp experience with our cutting-edge bot technolo
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://i.imgur.com/PEZ5QL2.jpeg` },
+                image: { url: `https://files.catbox.moe/s82tpk.jpeg` },
                 caption: message,
                 contextInfo: {
                     mentionedJid: [m.sender],
