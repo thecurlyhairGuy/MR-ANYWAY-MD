@@ -1,70 +1,84 @@
-const axios = require('axios');
-const { cmd } = require('../command');
+const util = require('util');
+const fs = require('fs-extra');
+const { zokou } = require(__dirname + "/../framework/zokou");
+const { format } = require(__dirname + "/../framework/mesfonctions");
+const os = require("os");
+const moment = require("moment-timezone");
+const s = require(__dirname + "/../set");
+const more = String.fromCharCode(8206)
+const readmore = more.repeat(4001)
 
-// Repo info
-cmd({
-    pattern: "repo",
-    alias: ["sc", "script", "info"],
-    desc: "Info about the bot repository",
-    category: "main",
-    react: "🥰",
-    filename: __filename
-},
-async (conn, mek, m, { from, quoted, reply }) => {
-    try {
-        // Fetch repository data from GitHub API
-        const repoResponse = await axios.get('https://api.github.com/repos/SilvaTechB/a-md');
-        const { stargazers_count, forks_count } = repoResponse.data;
-        const userCount = forks_count * 5; // Estimate user count based on forks
-
-        // Construct the message
-        const message = `
-*Hello there, ANYWAY MD User! 👋*
-
-💻 *ANYWAY MD Repository Info*:
-⭐ *Stars*: ${stargazers_count}
-🍴 *Forks*: ${forks_count}
-👥 *Users*: ${userCount}
-🔗 *Repository*: https://github.com/anywaytech2/ANYWAY-MD-V1
-> ✨ anyway md WhatsApp Bot – Simple. Smart. Feature-packed. 🚀
-Effortlessly elevate your WhatsApp experience with our cutting-edge bot technology! 🎊
-*💡 Tip: Don’t forget to fork the repo and leave a star to show your support! 🌟*
-
-🙌 Thank you for choosing ANYWAY MD – your ultimate bot companion! 🎉
-        `;
-
-        // Send the repository info as a text message
-        await conn.sendMessage(from, { text: message }, { quoted: mek });
-
-        // Send a related image with additional newsletter forwarding context
-        await conn.sendMessage(
-            from,
-            {
-                image: { url: `https://files.catbox.moe/s82tpk.jpeg` },
-                caption: message,
-                contextInfo: {
-                    mentionedJid: [m.sender],
-                    forwardingScore: 999,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363200367779016@newsletter',
-                        newsletterName: 'ANYWAY MD 💖🦄',
-                        serverMessageId: 143
-                    }
-                }
-            },
-            { quoted: mek }
-        );
-
-        // Send an audio response (PTT voice note)
-        await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/hpwsi2.mp3' },
-            mimetype: 'audio/mp4',
-            ptt: true
-        }, { quoted: mek });
-
-    } catch (error) {
-        console.error('Error fetching repository data:', error);
-        reply(`❌ *Error fetching repository data:* ${error.message}`);
+zokou({ nomCom: "repo", categorie: "General" }, async (dest, zk, commandeOptions) => {
+    let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
+    let { cm } = require(__dirname + "/../framework//zokou");
+    var coms = {};
+    var mode = "public";
+    
+    if ((s.MODE).toLocaleLowerCase() != "yes") {
+        mode = "private";
     }
-});
+
+
+    
+
+    cm.map(async (com, index) => {
+        if (!coms[com.categorie])
+            coms[com.categorie] = [];
+        coms[com.categorie].push(com.nomCom);
+    });
+
+    moment.tz.setDefault('Etc/GMT');
+
+// Créer une date et une heure en GMT
+const temps = moment().format('HH:mm:ss');
+const date = moment().format('DD/MM/YYYY');
+
+  let infoMsg =  `
+      *ANYWAY MD IMPORTANT INFO* 
+❒───────────────────❒
+*GITHUB LINK*
+> https://github.com/anywaytech2/ANYWAY-MD-V1
+
+*WHATSAPP CHANNEL*
+> https://whatsapp.com/channel/0029VagWQ255q08VTCRQKP09
+⁠
+╭───────────────────❒
+│❒⁠⁠⁠⁠ *RAM* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+│❒⁠⁠⁠⁠ *DEV1* : *Mr anyway*
+│❒⁠⁠⁠⁠ *DEV2* : *anywaytech*
+⁠⁠⁠⁠╰───────────────────❒
+  `;
+    
+let menuMsg = `
+     *𝘼𝙉𝙔𝙒𝘼𝙔 𝙏𝙀𝘾𝙃*
+
+❒────────────────────❒`;
+
+   var lien = mybotpic();
+
+   if (lien.match(/\.(mp4|gif)$/i)) {
+    try {
+        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" , gifPlayback : true }, { quoted: ms });
+    }
+    catch (e) {
+        console.log("🥵🥵 Menu erreur " + e);
+        repondre("🥵🥵 Menu erreur " + e);
+    }
+} 
+// Vérification pour .jpeg ou .png
+else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
+    try {
+        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" }, { quoted: ms });
+    }
+    catch (e) {
+        console.log("🥵🥵 Menu erreur " + e);
+        repondre("🥵🥵 Menu erreur " + e);
+    }
+} 
+else {
+    
+    repondre(infoMsg + menuMsg);
+    
+}
+
+}); 
