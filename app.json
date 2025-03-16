@@ -1,5 +1,5 @@
 {
-  "name":"ANYWAY-MD-V1",
+  "name":"𝐀𝐍𝐘𝐖𝐀𝐘-𝐗𝐌𝐃",
   "description":"Best whatsapp bot developed by mr anyway ",
   "keywords":["bot","node","baileys","whatsapp"],
   "logo":"https://files.catbox.moe/1hthvy.jpeg",
@@ -41,7 +41,7 @@
     "BOT_NAME" : {
        
       "description":"put A name for your bot",
-      "value":"-ANYWAY-MD",
+      "value":"-𝐀𝐍𝐘𝐖𝐀𝐘-𝐗𝐌𝐃",
       "required":false
 
     } ,
