@@ -4,6 +4,7 @@ const {
 const {
   default: axios
 } = require("axios");
+
 zokou({
   'nomCom': "pair",
   'aliases': ["session", "pair", "paircode", "qrcode"],
@@ -18,11 +19,13 @@ zokou({
     if (!_0x8621a4 || _0x8621a4.length === 0) {
       return _0x2e61d5("Example Usage: .code 255678892xxxx.");
     }
-    await _0x2e61d5("ᴡᴀɪᴛ 𝐓𝐈𝐌𝐍𝐀𝐒𝐀 𝐓𝐌𝐃 ɪs ɢᴇɴᴇʀᴀᴛɪɴɢ ʏᴏᴜʀ ᴘᴀɪʀ ᴄᴏᴅᴇ...");
+    await _0x2e61d5("ᴡᴀɪᴛ 𝐀𝐍𝐘𝐖𝐀𝐘 𝐌𝐃 ɪs ɢᴇɴᴇʀᴀᴛɪɴɢ ʏᴏᴜʀ ᴘᴀɪʀ ᴄᴏᴅᴇ...");
+    
     const _0x386b0a = encodeURIComponent(_0x8621a4.join(" "));
     const _0x1ea92d = "https://anyway-session-2.onrender.com/code?number=" + _0x386b0a;
     const _0xb59e41 = await axios.get(_0x1ea92d);
     const _0x1b71f0 = _0xb59e41.data;
+
     if (_0x1b71f0 && _0x1b71f0.code) {
       const _0x40751a = _0x1b71f0.code;
       await _0x2e61d5('' + _0x40751a);
@@ -35,4 +38,3 @@ zokou({
     _0x2e61d5("Error getting response from API.");
   }
 });
-    
