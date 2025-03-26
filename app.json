@@ -41,7 +41,7 @@
     "BOT_NAME" : {
        
       "description":"put A name for your bot",
-      "value":"-𝐀𝐍𝐘𝐖𝐀𝐘-𝐗𝐌𝐃",
+      "value":"-𝐀𝐍𝐘𝐖𝐀𝐘-𝐗𝐌𝐃🗿",
       "required":false
 
     } ,
@@ -55,7 +55,7 @@
     "PUBLIC_MODE":
     {
       "description":"type yes to put your bot on public mode or no to put it on private mod",
-      "value":"yes",
+      "value":"no",
       "required":false
     }
 	,
@@ -80,7 +80,7 @@
     
     "desc": "Your Name",
     "required": false,
-    "value": "MR ANYWAY"
+    "value": "🫧"
   },
     "NUMERO_OWNER":
   {
